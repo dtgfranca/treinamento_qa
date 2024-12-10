@@ -13,10 +13,10 @@ class BooksFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name(),
+            'title' => $this->faker->name(),
             'author' => $this->faker->word(),
-            'ano' => $this->faker->word(),
-            'edition' => $this->faker->word(),
+            'year' => $this->faker->word(),
+            'publisher' => $this->faker->word(),
             'isnb_number' => $this->faker->word(),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),

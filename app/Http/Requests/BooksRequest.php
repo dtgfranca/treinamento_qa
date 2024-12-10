@@ -9,10 +9,10 @@ class BooksRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['required'],
+            'title' => ['required'],
             'author' => ['required'],
-            'ano' => ['required'],
-            'edition' => ['required'],
+            'year' => ['required'],
+            'publisher' => ['required'],
             'isnb_number' => ['required'],
         ];
     }

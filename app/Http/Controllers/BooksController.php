@@ -17,22 +17,23 @@ class BooksController extends Controller
         return Books::create($request->validated());
     }
 
-    public function show(Books $books)
+    public function show(Books $book)
     {
-        return $books;
+        return $book;
     }
 
-    public function update(BooksRequest $request, Books $books)
+    public function update(BooksRequest $request, Books $book)
     {
-        $books->update($request->validated());
 
-        return $books;
+        $book->update($request->validated());
+
+        return $book;
     }
 
-    public function destroy(Books $books)
+    public function destroy(Books $book)
     {
-        $books->delete();
+        $book->delete();
 
-        return response()->json();
+        return response()->json(null, 204);
     }
 }

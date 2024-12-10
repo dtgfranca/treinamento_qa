@@ -8,11 +8,12 @@ return new class extends Migration {
     public function up()
     {
         Schema::create('books', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
+
+            $table->increments('id');
+            $table->string('title');
             $table->string('author');
-            $table->string('ano');
-            $table->string('edition');
+            $table->string('year');
+            $table->string('publisher');
             $table->string('isnb_number');
             $table->timestamps();
         });
